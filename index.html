@@ -14,6 +14,22 @@
 <title>Document</title>
 </head>
 <body>
+    <!-- intro animation -->
+    <div class="intro">
+        <div class="intro-text">
+            <h1 class="hide">
+                <span class="text-hide">Welcome to</span>
+            </h1>
+            <h1 class="hide">
+                <span class="text-hide">the portfolio of</span>
+            </h1>
+            <h1 class="hide">
+                <span class="text-hide">brahim ben souidene</span>
+            </h1>
+        </div>
+    </div>
+    <div class="slider-intro"></div>
+    <!-- intro animation end-->
     <!-- separator -->
     <div class="separator-left"></div>
     <!-- separator -->
@@ -23,9 +39,9 @@
         </div>
         <div class="theme-mode"><i class="far fa-lightbulb"></i></div>
         <div class="hamburgor"><i class="fas fa-bars"></i></div>
-        <div class="nav-links">
+        <div class="nav-links" id="my-navlinks">
             <ul>
-                <li class="link-item">
+                <li class="link-item active-link">
                     <a href="#home">
                         <i class="fas fa-home"></i>
                         <span class="text">home</span>
@@ -39,7 +55,7 @@
                     </a>
                     <span class="tooltip">About me</span>
                 </li>
-                <li class="link-item">
+                <li class="link-item ">
                     <a href="#education">
                         <i class="fas fa-graduation-cap"></i>
                         <span class="text">education</span>           
@@ -93,6 +109,14 @@
             </div>
         </div>
     </section>
-<script src="./script.js"></script>   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"
+            integrity="sha512-2fk3Q4NXPYAqIha0glLZ2nluueK43aNoxvijPf53+DgL7UW9mkN+uXc1aEmnZdkkZVvtJZltpRt+JqTWc3TS3Q=="
+            crossorigin="anonymous" referrerpolicy="no-referrer">
+            </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"
+            integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./script.js"></script>
+
 </body>
 </html>
