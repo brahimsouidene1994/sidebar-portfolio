@@ -11,10 +11,12 @@ tl.fromTo('.starting-text',{opacity:0},{opacity:1, duration:1});
 const hamburgor = document.querySelector(".hamburgor");
 const separator = document.querySelector(".separator-left");
 const sidebar = document.querySelector(".sidebar");
+const contentBody = document.querySelector(".content-body");
 
 hamburgor.addEventListener('click',()=>{
     sidebar.classList.toggle('active');
     separator.classList.toggle('active');
+    contentBody.classList.toggle('active');
 })
 /* hamburgor*/
 /** theme color */

@@ -364,9 +364,15 @@
 }
 /* content starts here*/
 .content-body {
-  width: 85%;
+  position: relative;
+  width: 84%;
   height: 100vh;
   float: right;
+  transition: all .5s ease;
+  padding : 0 10%;
+}
+.content-body.active{
+  width: 91.5%;
 }
 .content-body .first-page,
 .content-body .second-page,
@@ -405,6 +411,7 @@
 @media screen and (max-width: 960px) {
   .content-body {
     width: 100%;
+    padding: 0 10%;
   }
   .first-page .back-text h1,
   .second-page .back-text h1,
@@ -414,4 +421,112 @@
   }
 }
 /* back text of pages */
-/* content starts here*/
+/* page one*/
+.first-page .container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+}
+.first-page .container .container-text{
+    text-transform: capitalize;
+    font-family: "Bona Nova", serif;
+    color: var(--clr-text);
+    background: none;
+}
+.first-page .container .container-text h1{
+    font-size: 2.25rem;
+    font-weight: bold;
+    font-family: sans-serif;
+    margin-bottom: 15px;
+    background: none;
+    transition: all .5s ease;
+}
+.first-page .container .container-text h1 span{
+  font-size: 2.5rem;
+  font-weight: bolder;
+}
+.first-page .container .container-text h3{
+  font-size: 1.75rem;
+  margin-bottom: 13px;
+  background: none;
+}
+.first-page .container .container-text h5{
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+  background: none;
+}
+.first-page .container .container-text p{
+  font-size: 1.125rem;
+  background: none;
+}
+
+.first-page .container .img-field{
+    position: relative;
+    background: none;
+    width: 30%;
+    height: auto;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    padding: 8px;
+}
+.first-page .container .img-field .react{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70px;
+    height: 70px;
+    background: #f7f7f7;
+    padding: 10px;
+    border-radius: 50%;
+} 
+
+.first-page .container .img-field .angular{
+  position: absolute;
+  top: 25%;
+  left: 0;
+  width: 70px;
+  height: 70px;
+  background: #f7f7f7;
+  padding: 10px;
+  border-radius: 50%;
+} 
+.first-page .container .img-field .android{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 70px;
+  height: 70px;
+  background: #f7f7f7;
+  padding:  10px;
+  border-radius: 50%;
+} 
+.react img,
+.angular img,
+.android img{
+  width: 100%;
+  height: 100%;
+  background: #f7f7f7;
+}
+.first-page .container .img-field .avatar{
+  position: relative;
+  margin-top: -20px;
+  background: none;
+  width: 100%;
+  height: 100%;
+}
+@media screen and ( max-width : 960px ) {
+  .first-page .container{
+    flex-direction: column;
+  }
+  .first-page .container .img-field{
+    width: 50%;
+  }
+}
+/* page one*/
