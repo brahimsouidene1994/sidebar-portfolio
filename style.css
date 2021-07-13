@@ -1,12 +1,12 @@
 :root {
-  --clr-bg: #ade8f4;
-  --clr-text: #333533;
+  --clr-bg: rgb(248, 249, 250);
+  --clr-text: rgb(33, 37, 41);
   --clr-back-txt: rgb(202, 240, 248);
   --clr-back-txt-shadow: rgb(202, 240, 248, 0.5);
 }
 :root.dark {
   --clr-bg: #333533;
-  --clr-text: #ade8f4;
+  --clr-text: rgb(248, 249, 250);
   --clr-back-txt: #434443;
   --clr-back-txt-shadow: rgb(67, 68, 67, 0.5);
 }
@@ -140,7 +140,7 @@
   left: 0;
   bottom: 10%;
   width: 100%;
-  height: 60%;
+  height: 70%;
   background: var(--clr-bg);
 }
 .sidebar .nav-links ul li {
@@ -377,7 +377,8 @@
 .content-body .first-page,
 .content-body .second-page,
 .content-body .third-page,
-.content-body .forth-page {
+.content-body .forth-page,
+.content-body .fifth-page {
   width: 100%;
   height: 100%;
   position: relative;
@@ -388,7 +389,8 @@
 .first-page .back-text,
 .second-page .back-text,
 .third-page .back-text,
-.forth-page .back-text {
+.forth-page .back-text,
+.fifth-page .back-text {
   position: absolute;
   z-index: 1;
   top: 50%;
@@ -399,7 +401,8 @@
 .first-page .back-text h1,
 .second-page .back-text h1,
 .third-page .back-text h1,
-.forth-page .back-text h1 {
+.forth-page .back-text h1,
+.fifth-page .back-text h1 {
   text-align: center;
   font-size: 12em;
   color: var(--clr-back-txt);
@@ -416,7 +419,8 @@
   .first-page .back-text h1,
   .second-page .back-text h1,
   .third-page .back-text h1,
-  .forth-page .back-text h1 {
+  .forth-page .back-text h1,
+  .fifth-page .back-text h1 {
     font-size: 100pt;
   }
 }
@@ -439,6 +443,10 @@
     font-family: "Bona Nova", serif;
     color: var(--clr-text);
     background: none;
+    transform: translateY(200%);
+}
+.first-page .container .container-text.show{
+  transform: translateY(0%);
 }
 .first-page .container .container-text h1{
     font-size: 2.25rem;
@@ -479,7 +487,7 @@
 .first-page .container .img-field .react{
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
     width: 70px;
     height: 70px;
     background: #f7f7f7;
@@ -490,7 +498,7 @@
 .first-page .container .img-field .angular{
   position: absolute;
   top: 25%;
-  left: 0;
+  right: 0;
   width: 70px;
   height: 70px;
   background: #f7f7f7;
@@ -500,7 +508,7 @@
 .first-page .container .img-field .android{
   position: absolute;
   top: 50%;
-  left: 0;
+  right: 0;
   width: 70px;
   height: 70px;
   background: #f7f7f7;
@@ -530,3 +538,103 @@
   }
 }
 /* page one*/
+
+
+/*page service*/
+.forth-page .container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--clr-bg);
+  padding: 2em 2em;
+  z-index: 2;
+  box-shadow: 0 0 .5em var(--clr-text);
+}
+.forth-page .container .container-content{
+  background: var(--clr-bg);
+  width: 100%;
+  height: 100%;
+}
+.forth-page .container .container-content .tabs{
+  height: 60px;
+  width: 100%;
+  background: darkgray;
+  border-radius: 10px;
+}
+.forth-page .container .container-content .tabs ul{
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: darkgray;
+}
+.forth-page .container .container-content .tabs ul li{
+  width: 100%;
+  height: 100%;
+  list-style: none;
+  color: var(--clr-text);
+  background: darkgray;
+  text-transform: capitalize;
+  font-size: 20px;
+  text-align: center;
+  line-height: 3;
+}
+.forth-page .container .container-content .tabs ul li:hover{
+  cursor: pointer;
+  background: var(--clr-text);
+  color:var(--clr-bg);
+}
+.forth-page .container .container-content .tabs ul li.active{
+  background: var(--clr-text);
+  color:var(--clr-bg);
+}
+.forth-page .container .container-content 
+.skills{
+  padding: 1em 1.5em;
+  width: 100%;
+  height: 90%;
+}
+.forth-page .container .container-content 
+.skills .tabs-content{
+  display: none;
+}
+.forth-page .container .container-content 
+.skills #programming{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.forth-page .container .container-content 
+.skills .tabs-content ul{
+  width: 100%;
+  height: 100%;
+  list-style: none;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 1rem;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.forth-page .container .container-content 
+.skills .tabs-content ul li{
+  width: 170px;
+  height: 170px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.forth-page .container .container-content 
+.skills .tabs-content ul li img{
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  box-shadow: 0 0 .5rem #333533;
+  background: white;
+}
+
+/*page service*/

@@ -1,3 +1,4 @@
+
 /**intro animation */
 const tl = gsap.timeline({defaults:{ease:"power1.out"}});
 
@@ -40,3 +41,16 @@ for (var i = 0; i < btns.length; i++) {
   });
 }
 /**active link item */
+
+/** first page animations */
+
+var controller = new ScrollMagic.Controller();
+
+var scene1 = new ScrollMagic.Scene({
+    triggerElement : '.first-page .container'
+})
+.setClassToggle('.container-text','show')
+.addTo(controller);
+console.log(scene1)
+
+/** first page animations */

@@ -48,13 +48,6 @@
                     </a>
                     <span class="tooltip">Home</span>             
                 </li>
-                <li class="link-item">
-                    <a href="#about_me">
-                        <i class="fas fa-user-tie"></i>
-                        <span class="text">about me</span>                     
-                    </a>
-                    <span class="tooltip">About me</span>
-                </li>
                 <li class="link-item ">
                     <a href="#education">
                         <i class="fas fa-graduation-cap"></i>
@@ -62,6 +55,20 @@
                     </a>
                     <span class="tooltip">Education</span>
                 </li>
+                <li class="link-item ">
+                    <a href="#projects">
+                        <i class="fas fa-tasks"></i>
+                        <span class="text">projects</span>
+                    </a>
+                    <span class="tooltip">Projects</span>             
+                </li>
+                <li class="link-item ">
+                    <a href="#services">
+                        <i class="fas fa-tools"></i>
+                        <span class="text">services</span>
+                    </a>
+                    <span class="tooltip">Services</span>             
+                </li>                
                 <li class="link-item">
                     <a href="#contact_me">
                         <i class="fas fa-phone"></i>
@@ -110,21 +117,87 @@
 
             </div>
         </div>
-        <div class="second-page" id="about_me">
+        <div class="second-page" id="education">
             <div class="back-text">
-                <h1>about me</h1>
+                <h1>Education</h1>
             </div>
             <div class="container">
             </div>
         </div>
-        <div class="third-page" id="education">
+        <div class="third-page" id="projects">
             <div class="back-text">
-                <h1>education</h1>
+                <h1>projects</h1>
             </div>
             <div class="container">
             </div>
         </div>
-        <div class="forth-page" id="contact_me">
+        <div class="forth-page" id="services">
+            <div class="back-text">
+                <h1>services</h1>
+            </div>
+            <div class="container">
+                <div class="container-content">
+                    <div class="tabs">
+                        <ul>
+                            <li class="tablinks" onclick="openSkills(event, 'programming')">languagess</li>
+                            <li class="tablinks" onclick="openSkills(event, 'tools')">tools</li>
+                            <li class="tablinks" onclick="openSkills(event, 'soft')">soft skills</li>
+                        </ul>
+                    </div>
+                    <div class="skills">
+                        <div id="programming" class="tabs-content">
+                            <ul>
+                                <li>
+                                    <img src="./images/Ionic-logo175.png" alt="">
+                                </li>
+                                <li>
+                                    <img src="./images/Angular_full_color_logo.svg.png" alt="">
+                                </li>
+                                <li>
+                                    <img src="./images/reactjs.png" alt="">
+                                </li>
+                                <li>
+                                    <img src="./images/androidRobot.jpg" alt="">
+                                </li>
+                                <li>
+                                    <img src="./images/519-5191896_pofolio-website-html-css-javascript-logo-png-transparent.png" alt="">
+                                </li>
+                                <li>
+                                    <img src="./images/symfony-logo-png-transparent.png" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="tools" class="tabs-content">
+                            <ul>
+                                <li>
+                                    <img src="./images/bootstrap.png" alt="">
+                                </li>
+                                <li>
+                                    <img src="./images/xstyled-logo.jpg" alt="">
+                                </li>
+                                <li>
+                                    <img src="./images/adobe-xd-HzedyS.png" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="soft" class="tabs-content">
+                            <ul>
+                                <li>
+                                    <img src="./images/432-4329261_jira-software-logo-jira-logo-hd-png-download.png" alt="">
+                                </li>
+                                <li>
+                                    <img src="./images/scrum.png" alt="">
+                                </li>
+                                <li>
+                                    <img src="./images/daily-scrum-1409251-1192344.png" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fifth-page" id="contact_me">
             <div class="back-text">
                 <h1>contact me</h1>
             </div>
@@ -137,9 +210,27 @@
             crossorigin="anonymous" referrerpolicy="no-referrer">
             </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"
-            integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="./script.js"></script>
+    integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./script.js"></script>
+    <script>
+        function openSkills(evt, skills) {
+        var  i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabs-content");
+        for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(skills).style.display = "block";
+        document.getElementById(skills).style.width = "100%";
+        document.getElementById(skills).style.height = "100%";
+        document.getElementById(skills).style.background = "wheat";
+        evt.currentTarget.className += " active";
+    }
+    </script>
 
 </body>
 </html>
