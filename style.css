@@ -437,6 +437,8 @@
     align-items: center;
     justify-content: center;
     background: none;
+    padding: 2em 2em;
+    box-shadow: 0 0 .5em var(--clr-text);
 }
 .first-page .container .container-text{
     text-transform: capitalize;
@@ -478,9 +480,8 @@
 .first-page .container .img-field{
     position: relative;
     background: none;
-    width: 30%;
+    width: 75%;
     height: auto;
-    margin-left: 30px;
     margin-bottom: 20px;
     padding: 8px;
 }
@@ -488,8 +489,8 @@
     position: absolute;
     top: 0;
     right: 0;
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
     background: #f7f7f7;
     padding: 10px;
     border-radius: 50%;
@@ -499,8 +500,8 @@
   position: absolute;
   top: 25%;
   right: 0;
-  width: 70px;
-  height: 70px;
+  width: 80px;
+  height: 80px;
   background: #f7f7f7;
   padding: 10px;
   border-radius: 50%;
@@ -509,8 +510,8 @@
   position: absolute;
   top: 50%;
   right: 0;
-  width: 70px;
-  height: 70px;
+  width: 80px;
+  height: 80px;
   background: #f7f7f7;
   padding:  10px;
   border-radius: 50%;
@@ -521,6 +522,7 @@
   width: 100%;
   height: 100%;
   background: #f7f7f7;
+  border-radius: 50%;
 }
 .first-page .container .img-field .avatar{
   position: relative;
@@ -547,13 +549,13 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: var(--clr-bg);
+  background: none;
   padding: 2em 2em;
   z-index: 2;
   box-shadow: 0 0 .5em var(--clr-text);
 }
 .forth-page .container .container-content{
-  background: var(--clr-bg);
+  background: none;
   width: 100%;
   height: 100%;
 }
@@ -596,6 +598,7 @@
   padding: 1em 1.5em;
   width: 100%;
   height: 90%;
+  background: none;
 }
 .forth-page .container .container-content 
 .skills .tabs-content{
@@ -606,6 +609,7 @@
   display: block;
   width: 100%;
   height: 100%;
+  background: none;
 }
 .forth-page .container .container-content 
 .skills .tabs-content ul{
@@ -617,6 +621,7 @@
   grid-gap: 1rem;
   align-items: center;
   justify-content: space-evenly;
+  background: none;
 }
 .forth-page .container .container-content 
 .skills .tabs-content ul li{
@@ -638,3 +643,119 @@
 }
 
 /*page service*/
+
+/** contact me page*/
+.fifth-page .container{
+  width: 100%;
+  height: 100%;
+  padding: 2em;
+  background: none;
+  position: relative;
+  z-index: 3;
+  
+  box-shadow: 0 0 .5em var(--clr-text);
+}
+.fifth-page .container .container-heading{
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  text-transform: uppercase;
+  background: none;
+  padding: 1em 0;
+  background: none;
+}
+.fifth-page .container .container-heading h3{
+  font-size: 1.5em;
+  color: var(--clr-text);
+  font-family: "Bona Nova", serif;
+  background: none;
+}
+.fifth-page .container .container-body{
+  width: 100%;
+  height: 90%;
+  padding:1em 2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: none;
+}
+.fifth-page .container .container-body .body-img{
+  width: 100%;
+  height: 100%;
+  background: none;
+  
+}
+.fifth-page .container .container-body .body-img img{
+  width: 100%;
+  height: auto;
+  background: none;
+}
+.fifth-page .container .container-body .body-text{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  background: none;
+}
+.fifth-page .container .container-body 
+.body-text .aboutme h3,
+.fifth-page .container .container-body 
+.body-text .social-media h3
+{
+  color: var(--clr-text);
+  font-size: 1.8em;
+  font-family: "Bona Nova", serif;
+  margin-bottom: 10px;
+  background: none;
+}
+.fifth-page .container .container-body 
+.body-text .aboutme{
+  background: none;
+}
+.fifth-page .container .container-body 
+.body-text .aboutme .aboutme-text{
+  font-size: 14px;
+  font-family: monospace;
+  color: var(--clr-text);
+  background: none;
+}
+.fifth-page .container .container-body 
+.body-text .aboutme .aboutme-text p{
+  margin-bottom: 8px;
+  background: none;
+}
+.fifth-page .container .container-body 
+.body-text .aboutme .aboutme-text p::first-letter{
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: bold;
+  
+}
+.fifth-page .container .container-body 
+.body-text .social-media{
+  width: 100%;
+  background: none;
+}
+.fifth-page .container .container-body 
+.body-text .social-media .link-items{
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  background: none;
+}
+.fifth-page .container .container-body 
+.body-text .social-media .link-items a{
+  font-size: 30px;
+  color: var(--clr-text);
+  background: none;
+  text-decoration: none;
+  transition: .2s;
+}
+.fifth-page .container .container-body 
+.body-text .social-media .link-items a:hover{
+  font-size: larger;
+}
+/** contact me page*/

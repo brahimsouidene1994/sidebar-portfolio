@@ -1,4 +1,20 @@
 
+  function openSkills(evt, skills) {
+    var  i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabs-content");
+    for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(skills).style.display = "block";
+    document.getElementById(skills).style.width = "100%";
+    document.getElementById(skills).style.height = "100%";
+    document.getElementById(skills).style.background = "none";
+    evt.currentTarget.className += " active";
+}
 /**intro animation */
 const tl = gsap.timeline({defaults:{ease:"power1.out"}});
 
